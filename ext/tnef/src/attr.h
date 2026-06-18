@@ -31,6 +31,8 @@
 #include "tnef_types.h"
 #include "tnef_names.h"
 
+#include <stdio.h>
+
 #define MINIMUM_ATTR_LENGTH 8
 
 /* Object types */
@@ -69,6 +71,6 @@ typedef struct
 extern void attr_dump (Attr* attr);
 extern void attr_free (Attr* attr);
 extern void copy_date_from_attr (Attr* attr, struct date* dt);
-extern Attr* attr_read ();
+extern Attr* attr_read (FILE* in);
 
 #endif /* ATTR_H */
